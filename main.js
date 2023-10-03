@@ -26,3 +26,14 @@ window.addEventListener("keydown", (e) => {
   });
 });
 
+// Add an event listener for keyup events (when a key is released)
+window.addEventListener("keyup", (u) => {
+  // Loop through all elements with the class "key"
+  keyboard.forEach((k) => {
+    // Check if the current element has a class that matches the released key
+    if (k.classList.contains(u.key)) {
+      // Remove the "playing" class from the matching key element
+      k.classList.remove("playing");
+    }
+  });
+});
